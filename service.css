@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #e9e9eb;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: grey;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  /* Navigation Links */
+.navbar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 16px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect: Change Color and Add Underline */
+  .navbar ul li a:hover {
+    color: #ff4d4d; /* Change text color */
+  }
+  
+  .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff4d4d; /* Match the primary button color */
+    transition: width 0.3s ease; /* Smooth underline animation */
+  }
+  
+  .navbar ul li a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+  }
+  
+  .btn-consultant {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .service-section {
+    background: #d8d8da; /* Light grey with slight blue hue */
+    padding: 40px 20px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .service-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 5px;
+    opacity: 0.2;
+  }
+  .service-section .container {
+    position: relative;
+    margin-left: 40px;
+  }
+  .container h1 {
+    margin: 0;
+    font-size: 42px;
+    color:  #ff4d4d; /* Deep blue */
+    
+  }
+  .breadcrumb span{
+    color: #797979;
+  }
+  .breadcrumb {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #f85d5d; /* Red */
+  }
+  .breadcrumb a {
+    text-decoration: none;
+    color: #f85d5d;
+  }
+  .btn-consultant:hover {
+    background: transparent;
+    border: 1px solid #fff;
+    transition: 1s ease-out;
+    transition: 1s ease-in;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columns */
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .service-box {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+  
+  .service-box:hover h3,
+  .service-box:hover p {
+    color: #fff;
+  }
+  
+  .service-box:hover .icon {
+    background-color: #fff;
+    color: #ff6b6b;
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+    background-color: #ffecec;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    display: inline-block;
+  }
+  .service-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #212529;
+    transition: color 0.4s ease;
+  }
+ .service-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6c757d;
+    transition: color 0.4s ease;
+  }
+  /* Decorative Hover Effect */
+  .service-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent 70%);
+    transform: rotate(-45deg);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    z-index: 0;
+  }
+  .service-box:hover::before {
+    opacity: 1;
+  }
+  .content{
+    text-align: center;
+    margin-top: 110px;
+    padding: 50px 20px;
+    background-color: #d8d8da;
+  }
+  .content h3{
+    font-size: 36px;
+    color: #696969;
+    line-height: 1.5;
+
+  }
+  .content a{
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #ff6b6b;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+  .content a:hover{
+    background-color: #911508;
+  }
+@media (max-width: 768px) {
+  .btn-consultant{
+    width: 30px auto;
+    font-size: 11px;
+    margin-left: 40px;
+    padding: 10px 12px;
+  }
+  .navbar{
+    padding: 10px 25px;
+
+  }
+  .navbar ul{
+    gap: 15px;
+  }
+  .navbar .logo{
+    font-size: 16px;
+  }
+  .navbar ul li a{
+    font-size: 13px;
+  }
+  .hero{
+    padding: 40px 30px;
+  }
+  .hero-content{
+    max-width: 40%;
+  }
+  .subtitle{
+    font-size: 12px;
+  }
+  .title{
+    font-size: 25px;
+    margin: 8px 0;
+  }
+  .description{
+    font-size: 13px;
+    margin: 10px 0;
+  }
+  .hero-buttons a{
+    padding: 9px 12px;
+    font-size: 13px;
+    font-weight: 0;
+  }
+  .service-section{
+    padding: 10px 9px;
+  }
+  .service-section .container{
+    margin-left: 10px;
+}
+.container h1{
+  font-size: 22px;
+}
+.breadcrumb span{
+  margin-top: 10px;
+  font-size: 14px;
+}
+.breadcrumb a{
+  margin-top: 13px;
+  font-size: 14px;
+}
+.services-grid{
+  gap: 15px;
+  margin-top: 20px;
+}
+.service-box{
+  padding: 10px 10px;
+}
+.icon{
+  font-size: 1.9rem;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+}
+.service-box h3{
+ font-size: 1.2rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.service-box p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+}
+.content{
+  padding: 10px 20px;
+  margin-top: 100px;
+}
+.content h3{
+  font-size: 30px;
+  line-height: 1.3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content a{
+  margin-top: 2px;
+  padding: 9px 15px;
+  font-size: 14px;
+
+}
+.content a:hover{
+  background-color: #002147 ;
+}
+}

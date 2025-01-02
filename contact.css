@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #e9e9eb;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: grey;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  /* Navigation Links */
+.navbar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 16px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect: Change Color and Add Underline */
+  .navbar ul li a:hover {
+    color: #ff4d4d; /* Change text color */
+  }
+  
+  .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff4d4d; /* Match the primary button color */
+    transition: width 0.3s ease; /* Smooth underline animation */
+  }
+  
+  .navbar ul li a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+  }
+  
+  .btn-consultant {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .btn-consultant:hover {
+    background: transparent;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+    background-color: #dbdada;
+  }
+  
+  .contact-form {
+    background-color: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 1, 1);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    left: 16%;
+    bottom: 7%;
+  }
+  
+  .contact-form h2 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #ff4d4d;
+  }
+  
+  .contact-form button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #002147;
+  }
+  .contact-image{
+    width: 60%;
+  }
+  .contact-image img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(75, 75, 75);
+  }
+  @media (max-width: 768px) {
+    .btn-consultant{
+      width: 30px auto;
+      font-size: 11px;
+      margin-left: 40px;
+      padding: 10px 12px;
+    }
+    .navbar{
+      padding: 10px 25px;
+  
+    }
+    .navbar ul{
+      gap: 15px;
+    }
+    .navbar .logo{
+      font-size: 16px;
+    }
+    .navbar ul li a{
+      font-size: 13px;
+    }
+    .hero{
+      padding: 40px 30px;
+    }
+    .hero-content{
+      max-width: 40%;
+    }
+    .subtitle{
+      font-size: 12px;
+    }
+    .title{
+      font-size: 25px;
+      margin: 8px 0;
+    }
+    .description{
+      font-size: 13px;
+      margin: 10px 0;
+    }
+    .hero-buttons a{
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 0;
+    }
+    .hero-image img{
+      width: 250px;
+      border-radius: 45px;
+    }
+   body{
+    background: url(large.png);
+    background-repeat: no-repeat;
+    background-size: 250%
+   }
+   .contact-container{
+    display: flex;
+    padding: 0px;
+    gap: 0px;
+    background-color: transparent;
+   }
+   .contact-form h2{
+    font-size: 1.8rem;
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   .contact-form{
+    background-color: transparent;
+    padding: 25px;
+    max-width: 400px;
+    backdrop-filter: blur(2px);
+    left: 30%;
+    top: 30%;
+    bottom: 30%;
+   }
+   .contact-form input, 
+   .contact-form textarea{
+    margin-bottom: 14px;
+    padding: 8px;
+    background: none;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-bottom: 2px solid #fff;
+    font-size: 0.9rem;
+   }
+   .contact-form input::placeholder,
+   .contact-form textarea::placeholder{
+    color: rgb(138, 138, 138);
+   }
+   .contact-image{
+    display: none;
+   }
+   .contact-form button{
+    padding: 8px 8px;
+   }
+   .navbar{
+    background: none;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 2px 5px rgba(0, 0, 1, 0.4);
+   }
+   .btn-consultant:hover {
+    background: transparent;
+    border: 1px solid #fff;
+    transition: 1s ease-out;
+    transition: 1s ease-in;
+}
+
+  }
