@@ -15,3 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(element);
   });
 });
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('preloader').style.display = 'none';
+  }, 2000); // 2000 milliseconds = 2 seconds
+});
